@@ -2,12 +2,16 @@ from module.validate import http_checker
 from module.engine import urls,result,scrape,get_inputs_names_and_ids
 from concurrent.futures import ThreadPoolExecutor
 from module.engine import allowed_domains
+from module.subdomain import subDomain_Finder
 from time import gmtime, strftime
 
 time = strftime("%Y-%m-%d-%H:%M", gmtime())
 
 def start_proccess(file_name,url):
-    allowed_domains.append(http_checker(url,status="remove"))
+
+    alw_domain_data =  subDomain_Finder(url)
+    allowed_domains.extend(alw_domain_data)
+    
     url_file_name = "logs/"+time+"-"+file_name+".txt"
 
     scrape(url,5)

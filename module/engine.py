@@ -18,7 +18,7 @@ regex = re.compile(r"((https?):((//)|(\\\\))+([\w\d:#@%/;$()~_?\+-=\\\.&](#!)?)*
 
 block_list = (".css",".js",".mp4",".zip","png",".svg",".jpeg",".webp",".jpg")
 
-allowed_domains = []
+allowed_domains = list()
 
 def get_all_urls(url):
    valid_urls = set()
@@ -53,7 +53,7 @@ def scrape(url,max_depth,current_depth=1):
     found_urls = get_all_urls(url)
     for u in found_urls:
         parsed = urlparse(u)
-        if parsed.hostname in allowed_domains:
+        if parsed.hostname in allowed_domains[0]:
             if u.endswith(block_list) or ".js?" in u or ".css?" in u or "#" in u or parsed.path in paths:
                 continue
             else:
