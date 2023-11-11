@@ -29,7 +29,11 @@ def show_menu():
     time.sleep(0.1)
     print(Fore.RED+" [1]"+Fore.WHITE+" Start Recon\n")
     time.sleep(0.1)
-    print(Fore.RED+" [2]"+Fore.WHITE+" Exit . . .\n")
+    print(Fore.RED+" [2]"+Fore.WHITE+" Start Scan\n")
+    time.sleep(0.1)
+    print(Fore.RED+" [3]"+Fore.WHITE+" Setting\n")
+    time.sleep(0.1)
+    print(Fore.RED+" [4]"+Fore.WHITE+" Exit . . .\n")
 
 
 

@@ -2,12 +2,14 @@ import socket,os
 from concurrent.futures import ThreadPoolExecutor
 from colorama import Fore
 from module.banner import show_banner
-from module.validate import http_checker
+from module.validate import http_checker,remove_www
 user_url = ""
 find_subdomains = []
 numSub = 0
 def subDomain_Finder(url):
+    url = remove_www(url)
     url = http_checker(url,status="remove")
+    
     show_banner()
     global user_url
     global find_subdomains

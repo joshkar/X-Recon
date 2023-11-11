@@ -31,12 +31,19 @@ def http_checker(url,status):
          return url.replace("/","")
     
 
-
+   
    elif status == "set_http":
       parsed_url = urlparse(url)
       
       if parsed_url.scheme not in ('http', 'https'):
-        url = 'https://' + url
+        url = 'http://' + url
         return url
       else:
          return url
+   
+
+def remove_www(url):
+   if urlparse(url).netloc[0:4] == "www.":
+      url = url.replace("www.","")
+   
+   return url
