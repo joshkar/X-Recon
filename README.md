@@ -29,5 +29,5 @@
   - Identifies all forms and inputs found within the extracted links, creating a JSON output. This JSON output serves as a foundation for leveraging the XSS scanning capability of the tool.
 
 <br>
+
 ![demo](.imgs/demo1.jpg)
-<br>
