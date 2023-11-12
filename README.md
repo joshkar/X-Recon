@@ -56,5 +56,5 @@ $ python3 xr.py
 ## Target For Test:
 > You can use this address in the Get URL section
 ```bash
-  `http://testphp.vulnweb.com`
+  http://testphp.vulnweb.com
 ```
