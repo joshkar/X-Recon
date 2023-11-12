@@ -1,3 +1,16 @@
+.github-demo {
+  border-radius: 10px;
+  border: 2px solid #eaeaea;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.github-demo img {
+  width: 100%;
+  height: auto;
+}
+
 <h1 align="center">
   <br>
   <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/banner.jpg" alt="X-Recon"></a>
@@ -30,9 +43,10 @@
 
 <br>
 
-<a href="https://github.com/joshkar/X-Recon">
-  <img src=".imgs/demo1.jpg" alt="X-Recon" style="width: 100%; height: auto; border-radius: 10px; border: 2px solid #eaeaea; display: inline-block; overflow: hidden; margin: 10px;">
+<a href="https://github.com/joshkar/X-Recon" class="github-demo">
+  <img src=".imgs/demo1.jpg" alt="X-Recon">
 </a>
+
 
 <br>
 **Note:** 
