@@ -19,8 +19,15 @@
 </p>
 
 ### Features:
-- Find Subdomain for Scraping
-- Find site All link
-- Find All form and inputs <name/method>
+- **Subdomain Discovery:**
+  - Fetches relevant subdomains for the target website and compiles them into a whitelist. These subdomains can be utilized during the scraping process.
+
+- **Site-wide Link Discovery:**
+  - Gathers all links across the website based on the provided whitelist and the specified `max_depth`.
+
+- **Form and Input Extraction:**
+  - Identifies all forms and inputs found within the extracted links, creating a JSON output. This JSON output serves as a foundation for leveraging the XSS scanning capability of the tool.
+
 <br>
 ![demo](.imgs/demo1.jpg)
+<br>
