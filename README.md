@@ -30,8 +30,8 @@
 
 <br>
 
-<a href="https://github.com/joshkar/X-Recon" style="border-radius: 10px; border: 2px solid #eaeaea; display: inline-block; overflow: hidden; margin: 10px;">
-  <img src=".imgs/demo1.jpg" alt="X-Recon" style="width: 60%; height: auto;">
+<a href="https://github.com/joshkar/X-Recon">
+  <img src=".imgs/demo1.jpg" alt="X-Recon" style="width: 100%; height: auto; border-radius: 10px; border: 2px solid #eaeaea; display: inline-block; overflow: hidden; margin: 10px;">
 </a>
 
 <br>
