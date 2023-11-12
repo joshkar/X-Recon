@@ -30,8 +30,7 @@
 
 <br>
 
-![demo](.imgs/demo1.jpg)
-
+  <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo1.jpg" alt="X-Recon"></a>
 <br>
 **Note:** 
 
