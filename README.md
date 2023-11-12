@@ -31,3 +31,7 @@
 <br>
 
 ![demo](.imgs/demo1.jpg)
+
+<br>
+
+**Note:** This tool maintains a current list of file extensions that it skips during the exploration process. The default list includes common file types like images, stylesheets, and scripts (`".css",".js",".mp4",".zip","png",".svg",".jpeg",".webp",".jpg",".gif"`). Soon, you'll be able to customize this list to better suit your needs.
