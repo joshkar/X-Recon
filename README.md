@@ -41,3 +41,14 @@
 <br>
 
   <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo2.jpg" alt="X-Recon XSS Scan"></a>
+<br>
+<br>
+
+### Installation
+
+```bash
+$ git clone https://github.com/joshkar/X-Recon
+$ cd X-Recon
+$ python3 -m pip install -r requirements.txt
+$ python3 xr.py
+```
