@@ -1,42 +1,50 @@
-from colorama import Fore,Style
-import os,platform,time
+from ttpalette.ttpalette import Color as color
+from os import system
+from platform import uname
+
+menu = [
+    "Start Recon",
+    "Start Scan",
+    "Setting",
+    "Exit...",
+]
+
+banner = f"""██╗  ██╗     ██████╗ ███████╗ ██████╗ ██████╗ ███╗   ██╗
+╚██╗██╔╝     ██╔══██╗██╔════╝██╔════╝██╔═══██╗████╗  ██║
+ ╚███╔╝█████╗██████╔╝█████╗  ██║     ██║   ██║██╔██╗ ██║
+ ██╔██╗╚════╝██╔══██╗██╔══╝  ██║     ██║   ██║██║╚██╗██║
+██╔╝ ██╗     ██║  ██║███████╗╚██████╗╚██████╔╝██║ ╚████║{color.costum(75)}  This one is different{color.RESET}
+╚═╝  ╚═╝     ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝
+                                                        """
 
 def show_banner():
-    if platform.uname()[0] == "Windows":
-        os.system("cls")
+    if uname()[0] == "Windows":
+        system("cls")
     else:
-        os.system("clear")
+        system("clear")
+        
+    for char in banner:
+        if char == "█":
+            print(f"{color.costum(124)}{char}{color.RESET}", end="")
+        else:
+            print(char, end="")
+    
+    print()
+        
 
-    b = Fore.RED+"""
-               _______  _______  _______  _______  _       
- |\     /|     (  ____ )(  ____ \(  ____ \(  ___  )( (    /|
- ( \   / )     | (    )|| (    \/| (    \/| (   ) ||  \  ( |
-  \ (_) /_____ | (____)|| (__    | |      | |   | ||   \ | |
-   ) _ ((_____)|     __)|  __)   | |      | |   | || (\ \) |
-  / ( ) \      | (\ (   | (      | |      | |   | || | \   |
- ( /   \ )     | ) \ \__| (____/\| (____/\| (___) || )  \  |
- |/     \|     |/   \__/(_______/(_______/(_______)|/    )_)
-                                                           
-"""
-    print(b+Style.RESET_ALL)
+    
 
 
+def show_menu(question):
+    print(f"{color.costum(39)}[{color.RESET}?{color.costum(39)}]{color.RESET} {question}")
+    for item in menu:
+        print(f"{color.costum(39)}[{color.RESET}{menu.index(item)+1}{color.costum(39)}]{color.RESET} {item}")
+        
+    print()
+    
 
 
-def show_menu():
-    time.sleep(0.1)
-    print(Fore.RED+" ["+Fore.WHITE+"*"+Fore.RED+"]"+Fore.CYAN+" Choose one of the options below \n")
-    time.sleep(0.1)
-    print(Fore.RED+" [1]"+Fore.WHITE+" Start Recon\n")
-    time.sleep(0.1)
-    print(Fore.RED+" [2]"+Fore.WHITE+" Start Scan\n")
-    time.sleep(0.1)
-    print(Fore.RED+" [3]"+Fore.WHITE+" Setting\n")
-    time.sleep(0.1)
-    print(Fore.RED+" [4]"+Fore.WHITE+" Exit . . .\n")
-
-
+# {color.costum(46)}{color.RESET}
 
 def custom_input(path_name):
-    return input(Fore.RED+" ┌─["+Fore.LIGHTGREEN_EX+"X-RECON"+Fore.BLUE+"~"+Fore.WHITE+f"@{path_name}"+Fore.RED+"""]
- └──╼ """+Fore.WHITE+"$ ")
+    return input(f"{color.costum(46)}[{color.RESET}{color.costum(196)}X{color.RESET}-RECON{color.costum(46)}]{color.RESET}{color.costum(46)}[{color.RESET}{path_name.capitalize()}{color.costum(46)}]{color.RESET}\n$ ")
