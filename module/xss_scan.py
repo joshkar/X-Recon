@@ -2,6 +2,7 @@ import json
 import requests
 import re,os
 from colorama import Fore, Style
+from ttpalette.ttpalette import Color as color
 from concurrent.futures import ThreadPoolExecutor
 
 xss_num = 0
@@ -53,16 +54,17 @@ def start_scan(scan_file):
                 response = requests.post(url, data=data)
 
             else:
-                print("Invalid request method or configuration.")
+                print(f"[Error] {color.costum(196)}Invalid request method or configuration.{color.RESET}")
                 return
             
         
             # Check if the response contains the payload
             if xss_pattern.search(response.text):
-                print(f"{Fore.GREEN} [+] {Fore.WHITE}XSS Found in {url} " + Fore.RED + payload)      
+                print(f"{Fore.GREEN} [+] {Fore.WHITE}XSS Found in {url} " + Fore.RED + payload)  
+                print(f"\n[:)] {color.costum(46)}xss found in the link{color.RESET}\n[URL] {color.costum(69)}{url}{color.RESET}\n[Payload] {color.costum(214)}{payload}{color.RESET}\n")
 
             else:
-                print(f"{Fore.RED} [-] {Fore.WHITE}No XSS found in {url} " + Fore.YELLOW + payload)
+                print(f"\n[:(] {color.costum(196)}xss was not found in the link{color.RESET}\n[URL] {color.costum(69)}{url}{color.RESET}\n[Payload] {color.costum(214)}{payload}{color.RESET}\n")
 
 
         except Exception as e:
