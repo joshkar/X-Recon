@@ -28,12 +28,11 @@ def start_proccess(file_name,url):
     with ThreadPoolExecutor(max_workers=16) as pool:
         tr = pool.map(Processing_Extracted_Links,data)
         for _ in tr:
-            
             pass
 
 
 
-    json_log_name = f"logs/{time}-{file_name}-param.json"
+    json_log_name = f"logs/{time}-{file_name}-param.json".replace(":","-")
     with open(json_log_name, 'w') as json_file:
         json.dump(results, json_file, indent=4)
 
