@@ -16,13 +16,10 @@ def correct_url(main_url, found_url):
 
 def http_checker(url,status):
    if status == "remove":
-
-
       if url.lower().startswith("https://"):
          fix = url.replace("https://","").replace("/","")
          return fix
          
-
       elif url.lower().startswith("http://"):
          fix = url.replace("http://","").replace("/","")
          return fix
