@@ -2,7 +2,7 @@ import requests,re
 from urllib.parse import urlparse,unquote
 from bs4 import BeautifulSoup
 from module import validate
-from colorama import Fore
+from ttpalette.ttpalette import Color as color
 
 urls = set()
 paths = set()
@@ -39,7 +39,7 @@ numb = 1
 
 def scrape(url,max_depth,current_depth=1):
     global numb
-    print(Fore.RED+f"[{numb}] {Fore.WHITE+unquote(url)}")
+    print(f"[{numb}]{color.costum(135)} Scrape {color.RESET}{unquote(url)}")
     numb+=1
 
     if current_depth > max_depth:
@@ -125,7 +125,7 @@ def Processing_Extracted_Links(valid_url):
         
         else:
 
-            print(Fore.LIGHTBLUE_EX+f"[{num}] Extract Parametrs > {Fore.WHITE+unquote(i)}")
+            print(f"[{num}]{color.costum(39)} Extract Parametrs {color.RESET} {unquote(i)}")
             num +=1
             try:
 
