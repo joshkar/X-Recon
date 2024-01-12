@@ -2,7 +2,6 @@ import socket,os
 from requests import get
 from ttpalette.ttpalette import Color as color
 from concurrent.futures import ThreadPoolExecutor
-from colorama import Fore
 from module.banner import show_banner
 from module.validate import http_checker,remove_www
 user_url = ""

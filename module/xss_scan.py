@@ -1,7 +1,6 @@
 import json
 import requests
 import re,os
-from colorama import Fore, Style
 from ttpalette.ttpalette import Color as color
 from concurrent.futures import ThreadPoolExecutor
 
@@ -59,8 +58,7 @@ def start_scan(scan_file):
             
         
             # Check if the response contains the payload
-            if xss_pattern.search(response.text):
-                print(f"{Fore.GREEN} [+] {Fore.WHITE}XSS Found in {url} " + Fore.RED + payload)  
+            if xss_pattern.search(response.text):  
                 print(f"\n[:)] {color.costum(46)}xss found in the link{color.RESET}\n[URL] {color.costum(69)}{url}{color.RESET}\n[Payload] {color.costum(214)}{payload}{color.RESET}\n")
 
             else:
@@ -68,7 +66,7 @@ def start_scan(scan_file):
 
 
         except Exception as e:
-            print(Fore.RED + f"Error while testing {url}: {e}")
+            print(f"[{color.costum(124)}Notification{color.RESET}] Error while testing {url}: {e}")
 
     # Create a ThreadPoolExecutor to run tests in parallel
     with ThreadPoolExecutor(max_workers=20) as executor:

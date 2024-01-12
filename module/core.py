@@ -1,5 +1,4 @@
-from module.validate import http_checker,remove_www
-from module.engine import urls,result,results,scrape,Processing_Extracted_Links
+from module.engine import urls,results,scrape,Processing_Extracted_Links
 from concurrent.futures import ThreadPoolExecutor
 from module.engine import allowed_domains
 from module.subdomain import subDomain_Finder

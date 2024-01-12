@@ -1,7 +1,8 @@
 from module.banner import custom_input
 import json
 from ttpalette.ttpalette import Color as color
-from colorama import Fore
+
+
 
 def change_setting(json_file, new_max_depth):
 

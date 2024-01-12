@@ -3,7 +3,6 @@ from module.core import start_proccess
 from module.validate import http_checker
 from module.setting import submit_change
 from module.xss_scan import *
-import json
 
 while True:
     show_banner()
