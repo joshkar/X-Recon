@@ -18,6 +18,19 @@ regex = re.compile(r"((https?):((//)|(\\\\))+([\w\d:#@%/;$()~_?\+-=\\\.&](#!)?)*
 
 block_list = (".css",".js",".mp4",".zip","png",".svg",".jpeg",".webp",".jpg",".gif")
 
+block_list_path = 'module/costumblocklist.txt'
+
+try:
+    with open(block_list_path, 'r') as file:
+        lines = file.readlines()
+        
+    lines = [line.replace("\n","") for line in lines]
+    lines = tuple(lines)
+    
+    block_list = block_list + lines
+except:
+    pass
+
 allowed_domains = list()
 
 def get_all_urls(url):
