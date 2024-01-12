@@ -16,6 +16,10 @@
     <img src="https://img.shields.io/badge/Platform-Linux-red">
   </a>
 
+  <a href="https://en.wikipedia.org/wiki/Microsoft_Windows">
+    <img src="https://img.shields.io/badge/Platform-Windows-blue">
+  </a>
+
 </p>
 
 ### Features:
@@ -29,7 +33,15 @@
   - Identifies all forms and inputs found within the extracted links, creating a JSON output. This JSON output serves as a foundation for leveraging the XSS scanning capability of the tool.
 
 <br>
-  <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo1.jpg" alt="X-Recon"></a>
+  <div align="center">
+    <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/newdemo.png" alt="X-Recon XSS Scan"></a>
+  </div>
+<br>
+
+<br>
+  <div align="center">
+    <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo1.jpg" alt="X-Recon"></a>
+  </div>
 <br>
 <br>
 
@@ -39,8 +51,9 @@
 
 <br>
 <br>
-
-  <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo2.jpg" alt="X-Recon XSS Scan"></a>
+  <div align="center">
+    <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo2.jpg" alt="X-Recon XSS Scan"></a>
+  </div>
 <br>
 <br>
 
