@@ -1,4 +1,6 @@
 import socket,os
+from requests import get
+from ttpalette.ttpalette import Color as color
 from concurrent.futures import ThreadPoolExecutor
 from colorama import Fore
 from module.banner import show_banner
@@ -19,13 +21,25 @@ def subDomain_Finder(url):
         url = f"{subdomain}.{user_url}"
         try:
             response = socket.gethostbyname(url)
-            numSub +=1
-            find_subdomains.append(url)
-            print (f"{Fore.WHITE}[{numSub}]{Fore.GREEN} Found : {url}")
+            
+            page = get(url=f"https://{url}").text
+                
+            
+            if "404" in page:
+                numSub +=1
+                print(f"[{numSub}]{color.costum(220)} It exists but it's a{color.costum(196)} 404 {color.RESET}: {url}")
+            else:
+                numSub +=1
+                find_subdomains.append(url)
+                print(f"[{numSub}]{color.costum(46)} It exists {color.RESET}: {url}")
+                
+            
+            
+            
             
         except:
             numSub +=1
-            print(f"{Fore.WHITE}[{numSub}]{Fore.RED} Not Found : {url}")
+            print(f"[{numSub}]{color.costum(196)} It does not exist {color.RESET}: {url}")
 
 
 
