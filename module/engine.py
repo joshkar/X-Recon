@@ -1,4 +1,4 @@
-import requests,re
+import requests,re,json
 from urllib.parse import urlparse,unquote
 from bs4 import BeautifulSoup
 from module import validate
@@ -16,7 +16,7 @@ header = {
 
 regex = re.compile(r"((https?):((//)|(\\\\))+([\w\d:#@%/;$()~_?\+-=\\\.&](#!)?)*)", re.DOTALL)
 
-block_list = (".css",".js",".mp4",".zip","png",".svg",".jpeg",".webp",".jpg",".gif")
+block_list = tuple(json.loads(open("setting.json").read())['block_list'])
 
 allowed_domains = list()
 

@@ -40,3 +40,10 @@ def show_menu():
 def custom_input(path_name):
     return input(Fore.RED+" ┌─["+Fore.LIGHTGREEN_EX+"X-RECON"+Fore.BLUE+"~"+Fore.WHITE+f"@{path_name}"+Fore.RED+"""]
  └──╼ """+Fore.WHITE+"$ ")
+
+
+def setting_menu():
+    time.sleep(0.1)
+    print(Fore.RED+" [1]"+Fore.WHITE+" Change Max Depth\n")
+    time.sleep(0.1)
+    print(Fore.RED+" [2]"+Fore.WHITE+" Change SubDomain Block List\n")

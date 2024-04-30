@@ -1,7 +1,7 @@
 from module.banner import *
 from module.core import start_proccess
 from module.validate import http_checker
-from module.setting import submit_change
+from module.setting import Change_MaxDepth
 from module.xss_scan import *
 import json
 
@@ -46,7 +46,7 @@ while True:
         
         elif original_menu == "3":
             show_banner()
-            submit_change()
+            Change_MaxDepth()
             
 
         elif original_menu == "4":

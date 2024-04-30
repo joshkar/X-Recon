@@ -1,4 +1,17 @@
 {
     "max_depth": 5,
-    "subDomanFind": false
+    "subDomanFind": false,
+    "block_list": [
+        ".rar",
+        ".css",
+        ".js",
+        ".mp4",
+        ".zip",
+        "png",
+        ".svg",
+        ".jpeg",
+        ".webp",
+        ".jpg",
+        ".gif"
+    ]
 }
