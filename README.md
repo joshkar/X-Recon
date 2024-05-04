@@ -28,6 +28,9 @@
 - **Form and Input Extraction:**
   - Identifies all forms and inputs found within the extracted links, creating a JSON output. This JSON output serves as a foundation for leveraging the XSS scanning capability of the tool.
 
+- **XSS Scanning:**
+  - When the start recon option returns a custom json containing the extracted entries, the Xrecon tool can start the XSS vulnerability testing process and provide you with the desired results!
+
 <br>
   <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo1.jpg" alt="X-Recon"></a>
 <br>
@@ -35,7 +38,7 @@
 
 **Note:** 
 
->This tool maintains a current list of file extensions that it skips during the exploration process. The default list includes common file types like images, stylesheets, and scripts (`".css",".js",".mp4",".zip","png",".svg",".jpeg",".webp",".jpg",".gif"`). Soon, you'll be able to customize this list to better suit your needs
+>The scanning part is currently not active on SPA web applications and we only tested on websites developed with PHP and we were able to get amazing results. In the future, we will add these features to the tool
 
 <br>
 <br>
@@ -43,6 +46,11 @@
   <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo2.jpg" alt="X-Recon XSS Scan"></a>
 <br>
 <br>
+
+**Note:** 
+
+>This tool maintains a current list of file extensions that it skips during the exploration process. The default list includes common file types like images, stylesheets, and scripts (`".css",".js",".mp4",".zip","png",".svg",".jpeg",".webp",".jpg",".gif"`). Soon, you'll be able to customize this list to better suit your needs
+
 
 ### Installation
 
