@@ -1,10 +1,9 @@
 <h1 align="center">
   <br>
   <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/banner.jpg" alt="X-Recon"></a>
-
 </h1>
 
-<h4 align="center">A tool to find web page inputs and perform XSS scanning.</h4>
+<h4 align="center">A utility for identifying web page inputs and conducting XSS scanning.</h4>
 
 <p align="center">
 
@@ -20,16 +19,16 @@
 
 ### Features:
 - **Subdomain Discovery:**
-  - Fetches relevant subdomains for the target website and compiles them into a whitelist. These subdomains can be utilized during the scraping process.
+  - Retrieves relevant subdomains for the target website and consolidates them into a whitelist. These subdomains can be utilized during the scraping process.
 
 - **Site-wide Link Discovery:**
-  - Gathers all links across the website based on the provided whitelist and the specified `max_depth`.
+  - Collects all links throughout the website based on the provided whitelist and the specified `max_depth`.
 
 - **Form and Input Extraction:**
-  - Identifies all forms and inputs found within the extracted links, creating a JSON output. This JSON output serves as a foundation for leveraging the XSS scanning capability of the tool.
+  - Identifies all forms and inputs found within the extracted links, generating a JSON output. This JSON output serves as a foundation for leveraging the XSS scanning capability of the tool.
 
 - **XSS Scanning:**
-  - When the start recon option returns a custom json containing the extracted entries, the Xrecon tool can start the XSS vulnerability testing process and provide you with the desired results!
+  - Once the start recon option returns a custom JSON containing the extracted entries, the X-Recon tool can initiate the XSS vulnerability testing process and furnish you with the desired results!
 
 <br>
   <a href="https://github.com/joshkar/X-Recon"><img src=".imgs/demo1.jpg" alt="X-Recon"></a>
@@ -38,7 +37,7 @@
 
 **Note:** 
 
->The scanning part is currently not active on SPA web applications and we only tested on websites developed with PHP and we were able to get amazing results. In the future, we will add these features to the tool
+>The scanning functionality is currently inactive on SPA (Single Page Application) web applications, and we have only tested it on websites developed with PHP, yielding remarkable results. In the future, we plan to incorporate these features into the tool.
 
 <br>
 <br>
@@ -49,7 +48,7 @@
 
 **Note:** 
 
->This tool maintains a current list of file extensions that it skips during the exploration process. The default list includes common file types like images, stylesheets, and scripts (`".css",".js",".mp4",".zip","png",".svg",".jpeg",".webp",".jpg",".gif"`). Soon, you'll be able to customize this list to better suit your needs
+>This tool maintains an up-to-date list of file extensions that it skips during the exploration process. The default list includes common file types such as images, stylesheets, and scripts (`".css",".js",".mp4",".zip","png",".svg",".jpeg",".webp",".jpg",".gif"`). You can customize this list to better suit your needs by editing the setting.json file..
 
 
 ### Installation
@@ -59,10 +58,3 @@ $ git clone https://github.com/joshkar/X-Recon
 $ cd X-Recon
 $ python3 -m pip install -r requirements.txt
 $ python3 xr.py
-```
-
-## Target For Test:
-> You can use this address in the Get URL section
-```bash
-  http://testphp.vulnweb.com
-```
