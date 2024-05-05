@@ -58,6 +58,7 @@ $ git clone https://github.com/joshkar/X-Recon
 $ cd X-Recon
 $ python3 -m pip install -r requirements.txt
 $ python3 xr.py
+```
 
 ## Target For Test:
 > You can use this address in the Get URL section
